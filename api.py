@@ -25,7 +25,7 @@ s3_client = boto3.client(
 mlflow.set_tracking_uri("http://ec2-54-144-47-93.compute-1.amazonaws.com:5000/")
 
 # Affichage du titre 
-st.markdown("<h2 style='text-align: center; color: #4CAF50;'>Prédiction de la race de chiens avec ViT-B16</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: #6D28D9;'>Prédiction de la race de chiens avec ViT-B16</h2>", unsafe_allow_html=True)
 
 # Message informatif pour les utilisateurs
 st.write("**Note** : Ce modèle de prédiction fonctionne uniquement pour les races de chiens suivantes :")
