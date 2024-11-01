@@ -24,8 +24,14 @@ s3_client = boto3.client(
 # Configurer MLflow pour utiliser un serveur de suivi distant
 mlflow.set_tracking_uri("http://ec2-54-144-47-93.compute-1.amazonaws.com:5000/")
 
-# Affichage du titre avec un style amélioré
+# Affichage du titre 
 st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Prédiction de la race de chiens avec ViT-B16</h1>", unsafe_allow_html=True)
+
+# Message informatif pour les utilisateurs
+st.write("**Note** : Ce modèle de prédiction fonctionne uniquement pour les races de chiens suivantes :")
+st.write("- Japanese Spaniel\n- English Foxhound\n- Silky Terrier\n- Golden Retriever\n- German Shepherd")
+
+# Affichage du message de chargement
 st.write("Chargement des modèles et artefacts depuis MLflow...")
 
 # Fonction pour charger un modèle MLflow avec mise en cache
@@ -74,6 +80,7 @@ if uploaded_file is not None:
             st.markdown(f"<h2 style='text-align: center; color: blue;'>{predicted_name}</h2>", unsafe_allow_html=True)
         else:
             st.error("Le modèle ViT-B16 n'est pas chargé correctement.")
+
 
 
 
