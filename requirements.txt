@@ -1,0 +1,6 @@
+streamlit
+numpy
+pillow
+tensorflow
+mlflow
+boto3
