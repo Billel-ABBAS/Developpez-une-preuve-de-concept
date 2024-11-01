@@ -1,6 +1,6 @@
 streamlit
-numpy
+numpy==1.23.5         
 pillow
-tensorflow
+tensorflow==2.13.0     
 mlflow
 boto3
