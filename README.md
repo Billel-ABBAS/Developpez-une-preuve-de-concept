@@ -1,7 +1,10 @@
 # Projet 7 : Développez une preuve de concept
 
 ## Description
-Dans le cadre de mon projet de reconversion en data science, j’ai travaillé sur une preuve de concept en classification d’images, réalisée dans le cadre d’un test technique pour un recrutement chez **DataSpace**. L’idée était d'évaluer si un modèle de **Vision Transformer (ViT)**, basé sur les technologies récentes, pouvait surpasser les performances d'un modèle **CNN** plus classique, comme **Xception**, pour classifier des images de races de chiens.
+Ce projet de classification d’images a été réalisé dans le cadre d’un test technique pour un recrutement chez **DataSpace**, afin d'évaluer si un modèle de **Vision Transformer (ViT)**, basé sur des technologies récentes, peut surpasser les performances d'un modèle **CNN** plus classique, comme **Xception**, pour classifier des images de races de chiens.
+
+Accédez à la démo de l’application Streamlit pour **la prédiction de la race de chiens avec le modèle ViT** déployé sur MLflow et Streamlit Cloud, et dont le modèle est stocké dans un bucket AWS :  
+[**Lien vers l'application Streamlit**](https://openclassrooms-developpez-une-preuve-de-concept-hyyq6ey4sq43as.streamlit.app/)
 
 ## Objectifs
 - **Explorer la performance comparative** entre un modèle CNN, Xception, et un Vision Transformer pour une tâche de classification d'images.
@@ -9,19 +12,19 @@ Dans le cadre de mon projet de reconversion en data science, j’ai travaillé s
 - **Tester l’efficacité des Vision Transformers** pour traiter des images de manière globale, en capturant le contexte de l'image, par rapport aux CNN qui se focalisent sur des caractéristiques locales.
 
 ## Données
-Le projet utilise **827 images** issues du **Stanford Dogs Dataset**, représentant 5 races de chiens. J’ai étendu le projet précédent en ajoutant deux nouvelles races pour augmenter la diversité :
+Le projet utilise **827 images** issues du **Stanford Dogs Dataset**, représentant 5 races de chiens, avec une extension pour ajouter deux nouvelles races et augmenter la diversité :
 - **Races sélectionnées** : Berger Allemand, Silky Terrier, Golden Retriever, Japanese Spaniel, et English Foxhound.
 
 ## Méthodologie
-1. **Modèle Xception (CNN)** : J'ai utilisé Xception comme point de référence (baseline). Il a été optimisé via du fine-tuning pour adapter ses connaissances aux cinq classes de mon dataset.
+1. **Modèle Xception (CNN)** : Utilisé comme point de référence (baseline) et optimisé via du fine-tuning pour adapter ses connaissances aux cinq classes du dataset.
 2. **Modèle ViT (Vision Transformer)** :
-   - **Entraînement from scratch** : J’ai testé la capacité d’apprentissage du ViT sur un petit dataset, mais les performances sont restées limitées, montrant que ce modèle nécessite davantage de données.
-   - **Transfert d'apprentissage** : J’ai utilisé un modèle ViT pré-entraîné sur un large jeu de données (ImageNet-21K) et ajouté des couches pour l’adapter aux 5 classes de mon dataset. Cela m’a permis de tirer parti de l’apprentissage initial du modèle tout en l’ajustant à mon problème.
+   - **Entraînement from scratch** : Testé pour évaluer la capacité d’apprentissage du ViT sur un petit dataset, mais les performances sont restées limitées, démontrant que ce modèle nécessite davantage de données.
+   - **Transfert d'apprentissage** : Utilisation d’un modèle ViT pré-entraîné sur un large jeu de données (ImageNet-21K) et ajusté pour l’adaptation aux 5 classes du dataset, tirant ainsi parti de l’apprentissage initial tout en l’adaptant au problème spécifique.
 
 ## Résultats
-- **Xception (CNN)** : Atteint **97% de précision** après fine-tuning, efficace pour les tâches de classification classiques où les détails locaux sont primordiaux.
+- **Xception (CNN)** : Atteint **97% de précision** après fine-tuning, démontrant son efficacité pour les tâches de classification où les détails locaux sont essentiels.
 - **ViT (Vision Transformer)** :
-   - **From scratch** : Résultats décevants sur ce petit dataset, illustrant que le ViT n’atteint son plein potentiel qu’avec des volumes de données plus importants.
+   - **From scratch** : Les résultats ont été limités sur ce petit dataset, illustrant que le ViT n’atteint son plein potentiel qu’avec des volumes de données plus importants.
    - **Transfert d’apprentissage** : Le modèle a atteint **99% de précision**, surpassant Xception, et prouvant sa capacité à capter les relations globales au sein de l'image.
 
 ## Conclusion
