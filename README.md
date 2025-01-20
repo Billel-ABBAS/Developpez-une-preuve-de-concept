@@ -4,7 +4,7 @@
 Ce projet de classification d’images a été réalisé dans le cadre d’un test technique pour un recrutement chez **DataSpace**, afin d'évaluer si un modèle de **Vision Transformer (ViT)**, basé sur des technologies récentes, peut surpasser les performances d'un modèle **CNN** plus classique, comme **Xception**, pour classifier des images de races de chiens.
 
 Accédez à la démo de l’application Streamlit pour **la prédiction de la race de chiens avec le modèle ViT** déployé sur MLflow et Streamlit Cloud, et dont le modèle est stocké dans un bucket AWS :  
-[**Lien vers l'application Streamlit**](https://openclassrooms-developpez-une-preuve-de-concept-hyyq6ey4sq43as.streamlit.app/)
+[**Lien vers l'application Streamlit**](https://developpez-une-preuve-de-concept-ebcwudqs5h3gtbocjvxamp.streamlit.app/)
 
 ## Objectifs
 - **Explorer la performance comparative** entre un modèle CNN, Xception, et un Vision Transformer pour une tâche de classification d'images.
